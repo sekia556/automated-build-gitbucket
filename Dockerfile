@@ -1,12 +1,13 @@
 FROM centos
 
 MAINTAINER sken <sken [at] sken.biz>
+MAINTAINER sekia556 <sekia556 [at] yahoo.co.jp>
 
 RUN yum -y update
 RUN yum -y install java-1.7.0-openjdk
 RUN yum clean all
 
-ADD https://github.com/takezoe/gitbucket/releases/download/3.4/gitbucket.war /opt/gitbucket/gitbucket.war
+ADD https://github.com/sekia556/gitbucket/releases/download/3.4.1/gitbucket.war /opt/gitbucket/gitbucket.war
 
 RUN ln -s /gitbucket /root/.gitbucket
 
